@@ -1,16 +1,13 @@
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-// init Masonry
 const grid = document.querySelector('.grid');
-
-const msnry = new Masonry(grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-
+const msnry = new Masonry(grid);
 imagesLoaded(grid).on('progress', () => {
   // layout Masonry after each image loads
   msnry.layout();
 });
-AOS.init();
+
+const animation = document.querySelectorAll('.img-fluid');
+animation.forEach((item, index) => {
+  const el = item;
+  el.style.setProperty('animation-delay', `${index / 2 + 0.5}s`);
+  // el.classList.add('animation-zoomIn');
+});

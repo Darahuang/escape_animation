@@ -1,34 +1,45 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-/* force scrollbar */
-html {
-  overflow-y: scroll; }
-
-body {
-  font-family: sans-serif; }
-
-/* ---- grid ---- */
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-/* ---- .grid-item ---- */
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-  padding: 8px; }
-
-.grid-item {
-  float: right; }
-
-.grid-item img {
-  display: block;
-  max-width: 100%; }
-
 .bg-gray {
   background-color: #ced4da; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20%,
+  50% {
+    opacity: 1; }
+  80%,
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20%,
+  50% {
+    opacity: 1; }
+  80%,
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.animation-zoomIn {
+  -webkit-animation: zoomIn 0.5s;
+          animation: zoomIn 0.5s; }
 /*# sourceMappingURL=all.css.map */
