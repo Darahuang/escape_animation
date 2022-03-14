@@ -9,5 +9,4 @@ const animation = document.querySelectorAll('.img-fluid');
 animation.forEach((item, index) => {
   const el = item;
   el.style.setProperty('animation-delay', `${index / 2 + 0.5}s`);
-  // el.classList.add('animation-zoomIn');
 });
