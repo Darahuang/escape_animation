@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid');
+// const animation = document.querySelectorAll('.img-fluid');
 const msnry = new Masonry(grid);
 imagesLoaded(grid).on('progress', () => {
   // layout Masonry after each image loads
@@ -8,5 +9,8 @@ imagesLoaded(grid).on('progress', () => {
 const animation = document.querySelectorAll('.img-fluid');
 animation.forEach((item, index) => {
   const el = item;
-  el.style.setProperty('animation-delay', `${index / 2 + 0.5}s`);
+  setTimeout(() => {
+    el.classList.add('animation-zoomIn');
+    el.style.setProperty('animation-delay', `${index / 4 + 0.5}s`);
+  }, index * 200);
 });

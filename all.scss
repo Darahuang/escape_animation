@@ -4,13 +4,8 @@
 
 @keyframes zoomIn {
   0% {
-    opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
-  }
-  20%,
-  50% {
-    opacity: 1;
   }
   80%,
   40% {
@@ -21,10 +16,14 @@
   }
   100% {
     transform: translateY(0);
-   
+    opacity: 1;
   }
 }
-.animation-zoomIn {
-  animation: zoomIn 0.5s;
+
+img{
+  opacity: 0;
 }
 
+.animation-zoomIn {
+  animation: zoomIn 0.5s forwards;
+}
